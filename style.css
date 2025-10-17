@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(35, 35, 50);
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 25px;
+    margin-left: 75px;
+    margin-right: 75px;
+    justify-content: center;
+    align-items: center;
+}
+
+.left * {
+    background-color: rgb(0, 0, 130);
+}
+
+.left {
+    background-color: rgb(0, 0, 130);
+}
+
+.right {
+    background-color: aliceblue;
+    min-height: 100px;
+}
+
+.right * {
+    background-color: aliceblue;
+}
+.right h2{
+    margin: 20px;
+    color: rgb(0, 0, 50);
+}
+.interet li {
+    margin-left: 10px;
+    color: rgb(0, 0, 50);
+}
+.container {
+    display: flex;
+    min-height: 1052px;
+}
+
+.profile {
+    align-items: center;
+    margin: auto;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(196, 196, 255);
+}
+
+.profile img {
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 2px 5px black;
+    width: 100px;
+}
+
+.Contact {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact ul {
+    margin-top: 10px;
+    color: rgb(0, 0, 50);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.Contact h2 {
+    margin: 10px;
+}
+
+.Language h2 {
+    margin: 10px;
+}
+
+.Language {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pourcent {
+    align-self: center;
+    margin: 5px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(56, 55, 62);
+    display: block;
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 25px;
+    box-shadow: 1px 1px black;
+}
+
+.rate {
+    align-self: center;
+    height: 5px;
+    background-color: rgb(9, 141, 218);
+    display: block;
+    border-radius: 25px;
+}
+
+.eng {
+    width: 60%;
+}
+
+.fr {
+    width: 95%;
+}
+
+.ch {
+    width: 50%;
+}
+
+.skills{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu:hover {
+    margin: 11px;
+    border: 1px none ;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.checkbox {
+    display: none;
+}
+.menu_list {
+    list-style: none;
+    margin: 5px;
+    text-align: center;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+
+.niveau img {
+    width: 20px; 
+    height: 20px;
+    margin-left: 4px;
+}
+
+.checkbox:checked ~ .menu_list {
+    max-height: 500px;
+}
+
+.interet{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.animes {
+    background-image: url('anime.jpg');
+}
+
+.musique {
+    background-image: url('musique.jpg');
+}
+
+.jeux {
+    background-image: url('jeux.jpg');
+}
+
+.guitare {
+    background-image: url('guitare.jpg');
+}
+
+.interet li {
+    flex-basis: 40%;
+    min-height: 150px;
+    margin: 5%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;  
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.interet li:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+@media (min-width :1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left {
+        flex-basis: 25%;
+    }
+
+    .right {
+        flex-basis: 75%;
+    }
+    
+}
+
+@media (min-width :768px) and (max-width : 1023px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left {
+        flex-basis: 50%;
+    }
+
+    .right {
+        flex-basis: 50%;
+    }
+    .skills{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    .skills{
+        flex-direction: column;
+    }
+    .interet li {
+        min-height: 120px;
+    }
+}
